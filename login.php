@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
 
 </head>
 
-<body>
+<body >
   <!-- **********************************************************************************************************************************************************
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
@@ -132,7 +132,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
   <!--BACKSTRETCH-->
   <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
   <script type="text/javascript" src="lib/jquery.backstretch.min.js"></script>
-  <script>
+ <script>
     $.backstretch("img/login-bg.jpg", {
       speed: 500
     });
