@@ -22,8 +22,8 @@
                     <span>Gestion des utilisateurs</span>
                 </a>
                 <ul class="sub">
-                    <li><a href="basic_table.php">CRUD Utilisateurs</a></li>
-                    <li><a href="advanced_table.php">Informations utilisateurs</a></li>
+                    <li><a href="basic_table.php">CRUD Utilisateurs agents</a></li>
+                    <li><a href="advanced_table.php">Informations commerçants</a></li>
                 </ul>
             </li>
             <li class="sub-menu">
