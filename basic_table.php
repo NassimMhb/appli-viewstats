@@ -28,163 +28,45 @@
           <div class="col-md-12 mt">
             <div class="content-panel">
               <table class="table table-hover">
-                <h4><i class="fa fa-angle-right"></i> Liste des agents</h4>
+                <h4><i class="fa fa-angle-right"></i> Liste des commerçants</h4>
                 <hr>
                 <thead>
                   <tr>
                     <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Username</th>
+                    <th>Prénom</th>
+                    <th>Nom</th>
+                    <th>Nom id</th>
                       <th><i class="fa fa-bookmark"></i> Profit</th>
                       <th></th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                      <td>22000.50$ </td>
-                      <td>
+
+
+                <?php
+                $pdo = Database::connect();
+                $sql = 'SELECT * FROM commercants ORDER BY id ';
+                foreach ($pdo->query($sql) as $row) {
+                    echo '<tr>';
+                    echo'<td>' . $row['id'] . '</td>';
+                    echo'<td>' . $row['nom'] . '</td>';
+                    echo'<td>' . $row['prenom'] . '</td>';
+                    echo'<td>@' . $row['nomid'] . '</td>';
+                    echo'<td>' . $row['profit'] . ' $</td>';
+                    echo' <td>
                           <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
                           <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
                           <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                      </td>
-                  </tr>
-                  <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                      <td>22000.50$ </td>
-                      <td>
-                          <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                          <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                          <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                      </td>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>Simon</td>
-                    <td>Mosa</td>
-                    <td>@twitter</td>
-                      <td>22000.50$ </td>
-                      <td>
-                          <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                          <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                          <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>3</td>
-                      <td>Simon</td>
-                      <td>Mosa</td>
-                      <td>@twitter</td>
-                      <td>22000.50$ </td>
-                      <td>
-                          <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                          <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                          <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>3</td>
-                      <td>Simon</td>
-                      <td>Mosa</td>
-                      <td>@twitter</td>
-                      <td>22000.50$ </td>
-                      <td>
-                          <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                          <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                          <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>3</td>
-                      <td>Simon</td>
-                      <td>Mosa</td>
-                      <td>@twitter</td>
-                      <td>22000.50$ </td>
-                      <td>
-                          <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                          <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                          <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>3</td>
-                      <td>Simon</td>
-                      <td>Mosa</td>
-                      <td>@twitter</td>
-                      <td>22000.50$ </td>
-                      <td>
-                          <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                          <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                          <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>3</td>
-                      <td>Simon</td>
-                      <td>Mosa</td>
-                      <td>@twitter</td>
-                      <td>22000.50$ </td>
-                      <td>
-                          <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                          <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                          <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>3</td>
-                      <td>Simon</td>
-                      <td>Mosa</td>
-                      <td>@twitter</td>
-                      <td>22000.50$ </td>
-                      <td>
-                          <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                          <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                          <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>3</td>
-                      <td>Simon</td>
-                      <td>Mosa</td>
-                      <td>@twitter</td>
-                      <td>22000.50$ </td>
-                      <td>
-                          <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                          <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                          <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>3</td>
-                      <td>Simon</td>
-                      <td>Mosa</td>
-                      <td>@twitter</td>
-                      <td>22000.50$ </td>
-                      <td>
-                          <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                          <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                          <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>3</td>
-                      <td>Simon</td>
-                      <td>Mosa</td>
-                      <td>@twitter</td>
-                      <td>22000.50$ </td>
-                      <td>
-                          <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                          <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                          <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
-                      </td>
-                  </tr>
+                      </td>';
+      /*              echo '<td>' . '<a class="btn1 opt1" href="' . $row['ID'] . '">Lire</a></td>';
+                    echo '<td>' . '<a class="btn2 opt2" href="' . $row['ID'] . '">Modifier</a></td>';
+                    echo' <td>' . '<a class="btn3 opt3" href="' . $row['ID'] . ' ">Supprimer</a></td>';
+        */
+                    echo '</tr>';
+                }
+                Database::disconnect(); //on se deconnecte de la base
+                ;
+                ?>
                 </tbody>
               </table>
             </div>

@@ -3,8 +3,9 @@ require 'database.php';
 if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
     $loginError = ''; //on initialise nos messages d' erreurs
     $passwordError = '';
-    $password = $_POST['password']; //on securise les données
+    $password = sha1($_POST['password']); //on securise les données
     $login = $_POST['login'];
+    $email = $_POST['login'];
     $msgError='';
     // on vérifie les input
     $valid = true;
@@ -19,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
     if ($valid) { //si c'est bon, on connecte à la base
         $pdo = Database :: connect();
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $sql = "SELECT * FROM utilisateurs WHERE username= ? AND password= ? ";
+        $sql = "SELECT * FROM utilisateurs WHERE username= ? AND password= ?";
         $q = $pdo->prepare($sql);
         $q->execute(array($login, $password));
         $data = $q->fetch(PDO::FETCH_ASSOC);
@@ -27,6 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
             session_start(); //on ouvre la session
             $_SESSION['login'] = $data['username']; //on assigne nos valeurs
             $_SESSION['password'] = $data['password'];
+            $_SESSION['email'] = $data['email'];
             $_SESSION['role'] = $data['role'];
             echo '<p>Bienvenue ' . $data['username'] . ', 
 			vous êtes maintenant connecté!</p>
@@ -117,7 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST)) {
               </div>
               <div class="modal-footer">
                 <button data-dismiss="modal" class="btn btn-default" type="button">Retour</button>
-                <button class="btn btn-theme" type="button">Envoyer</button>
+                <button class="btn btn-theme" type="button"><a  href="login.php" style="color:#fff">Envoyer</a></button>
               </div>
             </div>
           </div>

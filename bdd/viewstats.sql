@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  mar. 14 mai 2019 à 10:23
+-- Généré le :  jeu. 23 mai 2019 à 09:40
 -- Version du serveur :  5.7.23
 -- Version de PHP :  7.2.10
 
@@ -150,6 +150,53 @@ INSERT INTO `agents` (`id`, `nom`, `prenom`, `age`, `adresse`, `ville`, `telepho
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `commercants`
+--
+
+DROP TABLE IF EXISTS `commercants`;
+CREATE TABLE IF NOT EXISTS `commercants` (
+  `id` mediumint(9) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `prenom` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `nomid` varchar(200) COLLATE utf8_bin NOT NULL,
+  `profit` int(200) NOT NULL,
+  `age` mediumint(9) DEFAULT NULL,
+  `adresse` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `ville` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  `telephone` varchar(100) COLLATE utf8_bin DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8_bin DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=101 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Déchargement des données de la table `commercants`
+--
+
+INSERT INTO `commercants` (`id`, `nom`, `prenom`, `nomid`, `profit`, `age`, `adresse`, `ville`, `telephone`, `email`) VALUES
+(1, 'Bowers', 'Fulton', 'bowfulton', 9821, 27, '682-9275 Ut Av.', 'Wenduine', '08 45 24 60 80', 'aliquet.molestie@magnaUt.co.uk'),
+(2, 'Irwin', 'Buckminster', 'irwbuckminster', 10023, 28, 'CP 184, 1232 Id Route', 'Pietrarubbia', '06 68 82 85 16', 'Quisque@euligula.co.uk'),
+(3, 'Lloyd', 'Oliver', 'llolivier', 4215, 43, 'CP 963, 4126 Dis Route', 'Cavaion Veronese', '06 18 32 11 79', 'libero@habitantmorbi.org'),
+(4, 'Fernandez', 'Ferdinand', 'ferferdinand', 19023, 35, '2950 Diam Av.', 'Sunset Point', '01 43 26 13 02', 'adipiscing.enim.mi@tellusloremeu.edu'),
+(5, 'Robinson', 'Jordan', 'robjordan', 3234, 33, '675-730 Sit Chemin', 'San Juan de la Costa', '03 15 54 00 81', 'libero@maurisIntegersem.co.uk'),
+(6, 'Austin', 'Ezra', 'ausezra', 1482, 30, 'CP 176, 3017 Et Impasse', 'Dingwall', '06 88 18 04 21', 'scelerisque@quamPellentesquehabitant.net'),
+(7, 'Stokes', 'Salvador', 'stosalvador', 2500, 30, 'CP 924, 3025 Vitae, Rd.', 'Greenock', '07 87 60 33 98', 'Sed.nunc@Donecat.co.uk'),
+(8, 'Rosario', 'Tyler', 'rostyler', 21892, 44, 'CP 981, 2146 Dis Rd.', 'Santa Inês', '03 95 81 33 66', 'quis@porttitor.org'),
+(9, 'Bender', 'Stone', 'benstone', 1729, 49, 'Appartement 761-6482 Malesuada Av.', 'Hoyerswerda', '09 59 03 90 55', 'nec.quam.Curabitur@quisdiam.co.uk'),
+(10, 'Gray', 'Quinlan', 'graquinlnan', 7891, 37, 'Appartement 515-2894 In Rue', 'Waterloo', '06 04 30 34 70', 'Vivamus.nisi@etliberoProin.org'),
+(11, 'Padilla', 'Jin', 'padjin', 9823, 38, '843-300 Turpis. Av.', 'Kayseri', '03 66 08 72 72', 'magna.nec@non.org'),
+(12, 'Duffy', 'Hall', 'dufhall', 23112, 44, 'CP 218, 1308 Dui Ave', 'Hanau', '01 77 21 13 65', 'eu.neque@cursusInteger.com'),
+(13, 'Cline', 'Merrill', 'climerrill', 3892, 34, 'CP 481, 4655 Ac Avenue', 'Trazegnies', '05 62 99 44 53', 'habitant.morbi.tristique@risusDuis.edu'),
+(14, 'Savage', 'Stewart', 'savstewart', 1762, 45, '530-4403 Nullam Rd.', 'Sooke', '07 75 87 25 88', 'tellus@eratin.edu'),
+(15, 'Maddox', 'Jason', 'madjason', 890, 42, '6417 Nec, Route', 'Rödermark', '04 82 74 35 79', 'lobortis.Class.aptent@ullamcorpereueuismod.org'),
+(16, 'Wong', 'Zephania', 'wonzephania', 22100, 27, '1513 Libero Chemin', 'Copertino', '06 77 04 13 07', 'elit@torquentper.co.uk'),
+(17, 'Knox', 'Austin', 'knoaustin', 2342, 34, '6253 Magna Route', 'Gualdo Cattaneo', '05 06 37 49 50', 'nec.leo@nascetur.ca'),
+(18, 'Hudson', 'Rooney', 'hudrooney', 10382, 26, '1114 Semper Rue', 'HŽron', '03 76 83 65 48', 'Curae@Phasellusat.co.uk'),
+(19, 'Solomon', 'Grant', 'solgrant', 8423, 34, '6466 Magna. Rd.', 'La Cruz', '05 61 57 94 89', 'quam.Pellentesque.habitant@turpisNullaaliquet.org'),
+(20, 'Palmer', 'Ryan', 'palryan', 7382, 31, 'CP 127, 7722 Tincidunt Impasse', 'Sesto Campano', '03 20 90 04 10', 'sit.amet@veliteget.co.uk');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `utilisateurs`
 --
 
@@ -159,16 +206,17 @@ CREATE TABLE IF NOT EXISTS `utilisateurs` (
   `username` varchar(200) COLLATE utf8_bin NOT NULL,
   `email` varchar(200) COLLATE utf8_bin NOT NULL,
   `password` varchar(200) COLLATE utf8_bin NOT NULL,
-  `role` int(200) NOT NULL,
+  `role` int(200) NOT NULL,v
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Déchargement des données de la table `utilisateurs`
 --
 
 INSERT INTO `utilisateurs` (`id`, `username`, `email`, `password`, `role`) VALUES
-(1, 'admin', 'admin@mail.com', 'password123', 1);
+(1, 'admin', 'admin@mail.com', 'cbfdac6008f9cab4083784cbd1874f76618d2a97', 1),
+(2, 'user1', 'user@mail.com', 'cbfdac6008f9cab4083784cbd1874f76618d2a97', 2);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

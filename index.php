@@ -225,11 +225,11 @@
     $(document).ready(function() {
       var unique_id = $.gritter.add({
         // (string | mandatory) the heading of the notification
-        title: 'Bienvenue to Viewstats!',
+        title: 'Bienvenue sur l\'application Viewstats!',
         // (string | mandatory) the text inside the notification
-        text: 'Bienvenue sur l\'application VIEWSTATS.',
+        text: 'Application dédié à la gestion des statistiques.',
         // (string | optional) the image to display on the left
-        image: 'img/ui-sam.jpg',
+        image: 'img/viewstats.jpg',
         // (bool | optional) if you want it to fade out on its own or just sit there
         sticky: false,
         // (int | optional) the time you want it to be alive for before fading out

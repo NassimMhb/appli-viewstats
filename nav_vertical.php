@@ -22,8 +22,8 @@
                     <span>Gestion des utilisateurs</span>
                 </a>
                 <ul class="sub">
-                    <li><a href="basic_table.php">CRUD Utilisateurs agents</a></li>
-                    <li><a href="advanced_table.php">Informations commerçants</a></li>
+                    <li><a href="basic_table.php">Liste des commerçants</a></li>
+                    <li><a href="advanced_table.php">Informations agents</a></li>
                 </ul>
             </li>
             <li class="sub-menu">
@@ -34,7 +34,6 @@
                 <ul class="sub">
                     <li><a href="morris.php">Morris</a></li>
                     <li><a href="chartjs.php">Chartjs</a></li>
-                    <li><a href="flot_chart.php">Flot Charts</a></li>
                 </ul>
             </li>
         </ul>
